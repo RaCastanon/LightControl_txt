@@ -1,0 +1,30 @@
+function [PWM] = mov_suave(pwm_ant, pwm_final,volt_sensor,voltmin,voltmax )
+%UNTITLED3 Summary of this function goes here
+%   Detailed explanation goes here
+
+valor=[1 105 166	210	243	271	294	314	332	348	363
+
+
+for i=1:num
+if(valor(i) == pwm_final)
+    final=i;
+    break;
+end
+end
+
+
+
+for i=1:num
+if(valor(i) == pwm_ant)
+   ant=i;
+    break;
+end
+end
+
+
+for(h=)
+PWM = valor(h);
+disp('Mandar la cantidad de pwm al foco');
+end
+
+

@@ -1,0 +1,14 @@
+
+**** Build of configuration Debug for project controlSignal ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+gmake[1]: 'controlSignal.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project controlSignal ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+gmake[1]: 'controlSignal.out' is up to date.
+
+**** Build Finished ****

@@ -1,0 +1,68 @@
+[System]
+Name='pi_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=24
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[-20 20]
+NumMFs=5
+MF1='MN':'trimf',[-20 -20 -10]
+MF2='PN':'trimf',[-20 -10 0]
+MF3='MP':'trimf',[10 20 20]
+MF4='Z':'trimf',[-10 0 10]
+MF5='PP':'trimf',[0 10 20]
+
+[Input2]
+Name='integrale'
+Range=[-20 20]
+NumMFs=5
+MF1='MN':'trimf',[-20 -20 -10]
+MF2='PN':'trimf',[-20 -10 0]
+MF3='Z':'trimf',[-10 0 10]
+MF4='PP':'trimf',[0 10 20]
+MF5='MP':'trimf',[10 20 20]
+
+[Output1]
+Name='u(t)'
+Range=[-1 1]
+NumMFs=5
+MF1='A':'trapmf',[-1 -0.99 -0.9 -0.5]
+MF2='MA':'trimf',[-0.5 -0.2 -0.2]
+MF3='NADA':'trimf',[-0.2 0 0.2]
+MF4='ME':'trimf',[0.2 0.2 0.5]
+MF5='E':'trapmf',[0.5 0.9 0.99 1]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 1 (1) : 1
+1 4, 1 (1) : 1
+1 5, 1 (1) : 1
+2 1, 2 (1) : 1
+2 2, 2 (1) : 1
+2 3, 2 (1) : 1
+2 4, 2 (1) : 1
+2 5, 2 (1) : 1
+3 1, 5 (1) : 1
+3 2, 5 (1) : 1
+3 3, 5 (1) : 1
+3 4, 5 (1) : 1
+3 5, 5 (1) : 1
+4 1, 1 (1) : 1
+4 2, 2 (1) : 1
+4 4, 4 (1) : 1
+4 5, 5 (1) : 1
+5 1, 4 (1) : 1
+5 2, 4 (1) : 1
+5 3, 4 (1) : 1
+5 4, 4 (1) : 1
+5 5, 4 (1) : 1

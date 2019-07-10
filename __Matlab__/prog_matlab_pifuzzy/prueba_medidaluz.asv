@@ -1,0 +1,11 @@
+clc;
+clear all;
+
+% img=imread('baboon.bmp');
+img=imread('Lighthouse.bmp');
+%imshow(img);
+opcion=;
+sw=11;
+[lu_z imgk] = medidaluz(img,opcion,sw);
+imshow(imgk);
+
